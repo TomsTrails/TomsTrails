@@ -1,0 +1,19 @@
+window.TOMS_TRAILS_HEADERS = [
+  {file:'assets/headers/2026-04-15_saelischloessli_spring_01.jpeg', date:'2026-04-15', datePrecision:'month', location:'Sälischlössli', season:'spring'},
+  {file:'assets/headers/2026-05-31_hoechi_flue_01.jpeg', date:'2026-05-31', datePrecision:'day', location:'Höchi Flue', season:'spring'},
+  {file:'assets/headers/2026-07-15_belchenflue_01.jpeg', date:'2026-07-15', datePrecision:'month', location:'Belchenflue', season:'summer'},
+  {file:'assets/headers/2026-07-15_saelischloessli_01.jpeg', date:'2026-07-15', datePrecision:'month', location:'Sälischlössli', season:'summer'},
+  {file:'assets/headers/2026-08-01_rigi_01.jpeg', date:'2026-08-01', datePrecision:'day', location:'Rigi', season:'summer'},
+  {file:'assets/headers/2026-08-08_pilatus_01.jpeg', date:'2026-08-08', datePrecision:'day', location:'Pilatus', season:'summer'},
+  {file:'assets/headers/2026-08-08_pilatus_02.jpeg', date:'2026-08-08', datePrecision:'day', location:'Pilatus', season:'summer'},
+  {file:'assets/headers/2026-08-08_pilatus_03.jpeg', date:'2026-08-08', datePrecision:'day', location:'Pilatus', season:'summer'},
+  {file:'assets/headers/2026-08-15_wilerhorn_01.jpeg', date:'2026-08-15', datePrecision:'day', location:'Wilerhorn', season:'summer'},
+  {file:'assets/headers/2026-08-15_wilerhorn_02.jpeg', date:'2026-08-15', datePrecision:'day', location:'Wilerhorn', season:'summer'},
+  {file:'assets/headers/2026-08-23_belchenflue_02.jpeg', date:'2026-08-23', datePrecision:'day', location:'Belchenflue', season:'summer'},
+  {file:'assets/headers/2026-08-29_brienzer_rothorn_01.jpeg', date:'2026-08-29', datePrecision:'day', location:'Brienzer Rothorn', season:'summer'},
+  {file:'assets/headers/2026-08-29_brienzer_rothorn_02.jpeg', date:'2026-08-29', datePrecision:'day', location:'Brienzer Rothorn', season:'summer'},
+  {file:'assets/headers/2026-08-29_brienzer_rothorn_03.jpeg', date:'2026-08-29', datePrecision:'day', location:'Brienzer Rothorn', season:'summer'},
+  {file:'assets/headers/2026-08-29_brienzer_rothorn_04.jpeg', date:'2026-08-29', datePrecision:'day', location:'Brienzer Rothorn', season:'summer'},
+  {file:'assets/headers/2026-summer_legacy_panorama_01.jpg', date:null, datePrecision:'unknown', location:'Legacy panorama', season:'summer'},
+  {file:'assets/headers/2026-summer_legacy_panorama_02.jpg', date:null, datePrecision:'unknown', location:'Legacy panorama', season:'summer'}
+];
