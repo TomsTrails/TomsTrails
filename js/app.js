@@ -144,7 +144,7 @@ function filteredRoutes(){
   const f=document.getElementById('q').value.toLowerCase();
   return routes.filter(r=>r._sheet_id !== undefined && (r.date+' '+displayDate(r.date)+' '+r.title).toLowerCase().includes(f));
 }
-const MASTER_TOTALS = {hikes:78, peaks:117, km:897.17, gain:42981, time:'184:44 h'};
+const MASTER_TOTALS = {hikes:82, peaks:117, km:931.47, gain:44061, time:'191:32 h'};
 function updateSummary(){
   // Overall totals are locked to the Excel tracking sheet, which is the source of truth.
   document.getElementById('sumHikes').textContent=MASTER_TOTALS.hikes;
@@ -296,7 +296,8 @@ function routesNearWesen(f){
 }
 function wesenPopupHtml(f){
   const i=wesenPhotoState[f.id]||0;
-  const img=(f.photoData && f.photoData.length) ? `<img class="wesen-thumb" src="${f.photoData[i]}" alt="${escapeHtml(f.title)}">` : '';
+  const popupPhoto=(typeof f.hero === 'string' && f.hero) ? f.hero : ((f.photoData && f.photoData.length) ? f.photoData[i] : '');
+  const img=popupPhoto ? `<img class="wesen-thumb" src="${popupPhoto}" alt="${escapeHtml(f.title)}">` : '';
   const maps=escapeHtml(f.map||('https://maps.google.com/?q='+f.lat+','+f.lon));
   return `<div class="wesen-popup-compact">${img}<div class="wesen-id">${wesenLabel(f)}</div><h3>${escapeHtml(f.title)}</h3><div style="font-size:12px;color:#475569;margin:0 0 6px"><b>Date:</b> ${escapeHtml(f.date||'')}</div><div class="wesen-popup-actions"><button class="wesen-btn" onclick="event.preventDefault(); event.stopPropagation(); openWesenDetails('${f.id}'); return false;">Open details</button><a class="wesen-link" href="${maps}" target="_blank" rel="noopener">Google Maps</a></div></div>`;
 }

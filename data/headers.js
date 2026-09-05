@@ -1,4 +1,6 @@
 window.TOMS_TRAILS_HEADERS = [
+  {file:'assets/headers/2026-09-05_wisenberg_01.jpeg', date:'2026-09-05', datePrecision:'day', location:'Wisenberg', season:'autumn'},
+  {file:'assets/headers/2026-09-05_wisenberg_02.jpeg', date:'2026-09-05', datePrecision:'day', location:'Wisenberg', season:'autumn'},
   {file:'assets/headers/2026-04-15_saelischloessli_spring_01.jpeg', date:'2026-04-15', datePrecision:'month', location:'Sälischlössli', season:'spring'},
   {file:'assets/headers/2026-05-31_hoechi_flue_01.jpeg', date:'2026-05-31', datePrecision:'day', location:'Höchi Flue', season:'spring'},
   {file:'assets/headers/2026-07-15_belchenflue_01.jpeg', date:'2026-07-15', datePrecision:'month', location:'Belchenflue', season:'summer'},
