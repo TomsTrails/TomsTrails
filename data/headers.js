@@ -1,4 +1,5 @@
 window.TOMS_TRAILS_HEADERS = [
+  {file:'assets/headers/2026-09-06_wynigen_01.jpeg', date:'2026-09-06', datePrecision:'day', location:'Wynigen', season:'autumn'},
   {file:'assets/headers/2026-09-05_wisenberg_01.jpeg', date:'2026-09-05', datePrecision:'day', location:'Wisenberg', season:'autumn'},
   {file:'assets/headers/2026-09-05_wisenberg_02.jpeg', date:'2026-09-05', datePrecision:'day', location:'Wisenberg', season:'autumn'},
   {file:'assets/headers/2026-04-15_saelischloessli_spring_01.jpeg', date:'2026-04-15', datePrecision:'month', location:'Sälischlössli', season:'spring'},
