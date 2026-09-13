@@ -1,4 +1,11 @@
 window.TOMS_TRAILS_HEADERS = [
+  {file:'assets/headers/2026-09-12_wasserfallen_01.jpeg', date:'2026-09-12', datePrecision:'day', location:'Wasserfallen', season:'autumn'},
+  {file:'assets/headers/2026-09-12_vogelberg_01.jpeg', date:'2026-09-12', datePrecision:'day', location:'Vogelberg', season:'autumn'},
+  {file:'assets/headers/2026-09-12_passwang_01.jpeg', date:'2026-09-12', datePrecision:'day', location:'Passwang', season:'autumn'},
+  {file:'assets/headers/2026-09-13_belchenflue_01.jpeg', date:'2026-09-13', datePrecision:'day', location:'Belchenflue', season:'autumn'},
+  {file:'assets/headers/2026-09-13_belchenflue_02.jpeg', date:'2026-09-13', datePrecision:'day', location:'Belchenflue', season:'autumn'},
+  {file:'assets/headers/2026-09-13_allerheiligenberg_01.jpeg', date:'2026-09-13', datePrecision:'day', location:'Allerheiligenberg', season:'autumn'},
+  {file:'assets/headers/2026-09-13_allerheiligenberg_sunrise_01.jpeg', date:'2026-09-13', datePrecision:'day', location:'Allerheiligenberg', season:'autumn'},
   {file:'assets/headers/2026-09-06_wynigen_01.jpeg', date:'2026-09-06', datePrecision:'day', location:'Wynigen', season:'autumn'},
   {file:'assets/headers/2026-09-05_wisenberg_01.jpeg', date:'2026-09-05', datePrecision:'day', location:'Wisenberg', season:'autumn'},
   {file:'assets/headers/2026-09-05_wisenberg_02.jpeg', date:'2026-09-05', datePrecision:'day', location:'Wisenberg', season:'autumn'},
