@@ -144,7 +144,7 @@ function filteredRoutes(){
   const f=document.getElementById('q').value.toLowerCase();
   return routes.filter(r=>r._sheet_id !== undefined && (r.date+' '+displayDate(r.date)+' '+r.title).toLowerCase().includes(f));
 }
-const MASTER_TOTALS = {hikes:86, peaks:124, km:982.25, gain:46574, time:'202:50 h'};
+const MASTER_TOTALS = {hikes:88, peaks:132, km:1015.60, gain:47964, time:'210:19 h'};
 function updateSummary(){
   // Overall totals are locked to the Excel tracking sheet, which is the source of truth.
   document.getElementById('sumHikes').textContent=MASTER_TOTALS.hikes;
@@ -360,6 +360,7 @@ function initWesen(){
   wesenFinds.forEach(addWesenMarker);
   wesenLayer.addTo(map);
   const el=document.getElementById('sumWesen'); if(el) el.textContent=wesenFinds.length;
+  const badge=document.getElementById('wesenCountBadge'); if(badge) badge.textContent=wesenFinds.length;
 }
 
 function renderRouteList(){

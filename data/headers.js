@@ -1,4 +1,9 @@
 window.TOMS_TRAILS_HEADERS = [
+  {file:'assets/headers/2026-09-19_creux_du_van_01.png', date:'2026-09-19', datePrecision:'day', location:'Creux du Van', season:'autumn'},
+  {file:'assets/headers/2026-09-19_le_soliat_01.png', date:'2026-09-19', datePrecision:'day', location:'Le Soliat', season:'autumn'},
+  {file:'assets/headers/2026-09-19_creux_du_van_02.png', date:'2026-09-19', datePrecision:'day', location:'Creux du Van', season:'autumn'},
+  {file:'assets/headers/2026-09-19_creux_du_van_03.png', date:'2026-09-19', datePrecision:'day', location:'Creux du Van', season:'autumn'},
+
   {file:'assets/headers/2026-09-12_wasserfallen_01.jpeg', date:'2026-09-12', datePrecision:'day', location:'Wasserfallen', season:'autumn'},
   {file:'assets/headers/2026-09-12_vogelberg_01.jpeg', date:'2026-09-12', datePrecision:'day', location:'Vogelberg', season:'autumn'},
   {file:'assets/headers/2026-09-12_passwang_01.jpeg', date:'2026-09-12', datePrecision:'day', location:'Passwang', season:'autumn'},
