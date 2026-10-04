@@ -1,4 +1,6 @@
 window.TOMS_TRAILS_HEADERS = [
+  {file:'assets/headers/2026-10-03_wildspitz_01.jpeg', date:'2026-10-03', datePrecision:'day', location:'Wildspitz', season:'autumn'},
+
   {file:'assets/headers/2026-09-19_creux_du_van_01.png', date:'2026-09-19', datePrecision:'day', location:'Creux du Van', season:'autumn'},
   {file:'assets/headers/2026-09-19_le_soliat_01.png', date:'2026-09-19', datePrecision:'day', location:'Le Soliat', season:'autumn'},
   {file:'assets/headers/2026-09-19_creux_du_van_02.png', date:'2026-09-19', datePrecision:'day', location:'Creux du Van', season:'autumn'},
