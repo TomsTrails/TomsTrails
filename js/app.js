@@ -142,7 +142,7 @@ function hoursToText(hours){
 }
 function filteredRoutes(){
   const f=document.getElementById('q').value.toLowerCase();
-  return routes.filter(r=>r._sheet_id !== undefined && (r.date+' '+displayDate(r.date)+' '+r.title).toLowerCase().includes(f));
+  return routes.filter(r=>r._sheet_id !== undefined && (r.date+' '+displayDate(r.date)+' '+r.title).toLowerCase().includes(f)).sort((a,b)=>b.date.localeCompare(a.date));
 }
 const MASTER_TOTALS = {hikes:92, peaks:150, km:1093.55, gain:51236, time:'227:16 h'};
 function updateSummary(){
