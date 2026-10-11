@@ -144,7 +144,7 @@ function filteredRoutes(){
   const f=document.getElementById('q').value.toLowerCase();
   return routes.filter(r=>r._sheet_id !== undefined && (r.date+' '+displayDate(r.date)+' '+r.title).toLowerCase().includes(f)).sort((a,b)=>b.date.localeCompare(a.date));
 }
-const MASTER_TOTALS = {hikes:92, peaks:150, km:1093.55, gain:51236, time:'227:16 h'};
+const MASTER_TOTALS = {hikes:94, peaks:158, km:1136.00, gain:52886, time:'235:57 h'};
 function updateSummary(){
   // Overall totals are locked to the Excel tracking sheet, which is the source of truth.
   document.getElementById('sumHikes').textContent=MASTER_TOTALS.hikes;
@@ -229,7 +229,12 @@ function addPeakMarker(peak){
   const markerSvg=manual
     ? '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 14.5 14H1.5Z" fill="white" fill-opacity="0.92" stroke="#c2185b" stroke-width="2" stroke-linejoin="round"/></svg>'
     : '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 14.5 14H1.5Z" fill="#c2185b" stroke="white" stroke-width="0.8" stroke-linejoin="round"/></svg>';
-  const icon=L.divIcon({className:'peak-svg-icon', html:markerSvg, iconSize:[16,16], iconAnchor:[8,14], popupAnchor:[0,-14]});
+  // Keep peaks with identical supplied coordinates independently clickable.
+  // Their data coordinates stay exact; only the icon is visually offset.
+  const colocated=peaks.filter(p=>Number(p.lat)===Number(peak.lat) && Number(p.lon)===Number(peak.lon));
+  const duplicateIndex=colocated.findIndex(p=>p.id===peak.id);
+  const iconAnchorX=8-(Math.max(0,duplicateIndex)*18);
+  const icon=L.divIcon({className:'peak-svg-icon', html:markerSvg, iconSize:[16,16], iconAnchor:[iconAnchorX,14], popupAnchor:[0,-14]});
   const marker=L.marker([peak.lat, peak.lon], {icon, title:peak.name}).bindPopup(peakPopupHtml(peak));
   marker.on('popupopen', e=>{
     e.popup.getElement().querySelectorAll('.peak-route-link').forEach(a=>{
