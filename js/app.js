@@ -144,7 +144,7 @@ function filteredRoutes(){
   const f=document.getElementById('q').value.toLowerCase();
   return routes.filter(r=>r._sheet_id !== undefined && (r.date+' '+displayDate(r.date)+' '+r.title).toLowerCase().includes(f)).sort((a,b)=>b.date.localeCompare(a.date));
 }
-const MASTER_TOTALS = {hikes:94, peaks:158, km:1136.00, gain:52886, time:'235:57 h'};
+const MASTER_TOTALS = {hikes:96, peaks:161, km:1181.64, gain:55139, time:'245:25 h'};
 function updateSummary(){
   // Overall totals are locked to the Excel tracking sheet, which is the source of truth.
   document.getElementById('sumHikes').textContent=MASTER_TOTALS.hikes;
