@@ -144,7 +144,7 @@ function filteredRoutes(){
   const f=document.getElementById('q').value.toLowerCase();
   return routes.filter(r=>r._sheet_id !== undefined && (r.date+' '+displayDate(r.date)+' '+r.title).toLowerCase().includes(f)).sort((a,b)=>b.date.localeCompare(a.date));
 }
-const MASTER_TOTALS = {hikes:97, peaks:171, km:1205.27, gain:56432, time:'251:02 h'};
+const MASTER_TOTALS = {hikes:99, peaks:177, km:1236.38, gain:57734, time:'257:37 h'};
 function updateSummary(){
   // Overall totals are locked to the Excel tracking sheet, which is the source of truth.
   document.getElementById('sumHikes').textContent=MASTER_TOTALS.hikes;
@@ -201,6 +201,11 @@ function routeMentionsPeak(route, peak){
   return names.some(n=>n && t.includes(n));
 }
 function routesNearPeak(peak){
+  // Optional explicit association for generic/ambiguous peak names (e.g. "Berg").
+  // When present, do not apply automatic title/proximity matching.
+  if(Array.isArray(peak.route_ids) && peak.route_ids.length){
+    return peak.route_ids.map(id=>routes.find(r=>r.id===id)).filter(Boolean).map(r=>({route:r, why:'explicit association'}));
+  }
   const found=[];
   routes.filter(r=>r._sheet_id!==undefined).forEach(r=>{
     let why='';
