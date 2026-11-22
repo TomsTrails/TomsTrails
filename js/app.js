@@ -144,14 +144,9 @@ function filteredRoutes(){
   const f=document.getElementById('q').value.toLowerCase();
   return routes.filter(r=>r._sheet_id !== undefined && (r.date+' '+displayDate(r.date)+' '+r.title).toLowerCase().includes(f)).sort((a,b)=>b.date.localeCompare(a.date));
 }
-const MASTER_TOTALS = {hikes:102, peaks:187, km:1288.40, gain:60119, time:'270:15 h'};
+const MASTER_TOTALS = {hikes:103, peaks:188, km:1309.48, gain:60674, time:'274:10 h'};
 function updateSummary(){
-  // Overall totals are locked to the Excel tracking sheet, which is the source of truth.
-  document.getElementById('sumHikes').textContent=MASTER_TOTALS.hikes;
-  document.getElementById('sumPeaks').textContent=MASTER_TOTALS.peaks;
-  document.getElementById('sumKm').textContent=MASTER_TOTALS.km.toFixed(2);
-  document.getElementById('sumGain').textContent=MASTER_TOTALS.gain.toLocaleString()+' m';
-  document.getElementById('sumTime').textContent=MASTER_TOTALS.time;
+  // Overall totals are retained as the source of truth; the former bottom statistics strip has been removed.
 }
 function highlightRoute(id){
   const layer=layers.get(id);
