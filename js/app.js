@@ -246,7 +246,7 @@ function addPeakMarker(peak){
 function initPeaks(){
   peaks.forEach(addPeakMarker);
   peaksLayer.addTo(map);
-  document.getElementById('sumPeaks').textContent=peaks.length;
+  const sumPeaks=document.getElementById('sumPeaks'); if(sumPeaks) sumPeaks.textContent=peaks.length;
   // Best-effort browser-side geocoding for any peaks without sheet/GPX coordinates.
   // Results are cached locally by the browser and use the Swiss GeoAdmin search service.
   const missing=peaks.filter(p=>!p.lat || !p.lon);
